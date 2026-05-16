@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Bus Ticket Booking</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Bus Ticket Booking</h2>
+
+    <p style="color:red; text-align:center;">
+
+        <span th:text="${message}"></span>
+
+    </p>
+
+    <form action="/saveBooking" method="post">
+
+        <input type="text"
+               name="userName"
+               placeholder="Enter User Name"
+               required>
+
+        <input type="text"
+               name="busName"
+               placeholder="Enter Bus Name"
+               required>
+
+        <input type="text"
+               name="source"
+               placeholder="Enter Source"
+               required>
+
+        <input type="text"
+               name="destination"
+               placeholder="Enter Destination"
+               required>
+
+        <input type="number"
+               name="seatNumber"
+               placeholder="Enter Seat Number"
+               required>
+
+        <button type="submit">
+            Book Ticket
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

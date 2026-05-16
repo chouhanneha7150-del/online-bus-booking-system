@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>All Buses</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container table-container">
+
+    <h2>Available Buses</h2>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Bus Name</th>
+            <th>Bus Number</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Time</th>
+            <th>Price</th>
+        </tr>
+
+        <tr th:each="bus : ${buses}">
+
+            <td th:text="${bus.busId}"></td>
+
+            <td th:text="${bus.busName}"></td>
+
+            <td th:text="${bus.busNumber}"></td>
+
+            <td th:text="${bus.source}"></td>
+
+            <td th:text="${bus.destination}"></td>
+
+            <td th:text="${bus.departureTime}"></td>
+
+            <td th:text="${bus.price}"></td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

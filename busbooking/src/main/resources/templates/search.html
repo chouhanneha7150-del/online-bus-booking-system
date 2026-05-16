@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Search Bus</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Search Bus</h2>
+
+    <form action="/searchBus" method="get">
+
+        <input type="text"
+               name="source"
+               placeholder="Enter Source"
+               required>
+        <br><br>
+
+        <input type="text"
+               name="destination"
+               placeholder="Enter Destination"
+               required>
+        <br><br>
+
+        <button type="submit">
+            Search Bus
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

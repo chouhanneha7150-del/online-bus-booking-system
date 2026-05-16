@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Bus Ticket</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Bus Ticket</h2>
+
+    <table>
+
+        <tr>
+            <th>Booking ID</th>
+            <td th:text="${ticket.bookingId}"></td>
+        </tr>
+
+        <tr>
+            <th>User Name</th>
+            <td th:text="${ticket.userName}"></td>
+        </tr>
+
+        <tr>
+            <th>Bus Name</th>
+            <td th:text="${ticket.busName}"></td>
+        </tr>
+
+        <tr>
+            <th>Source</th>
+            <td th:text="${ticket.source}"></td>
+        </tr>
+
+        <tr>
+            <th>Destination</th>
+            <td th:text="${ticket.destination}"></td>
+        </tr>
+
+        <tr>
+            <th>Seat Number</th>
+            <td th:text="${ticket.seatNumber}"></td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <button onclick="window.print()">
+        Print Ticket
+    </button>
+
+</div>
+
+</body>
+</html>

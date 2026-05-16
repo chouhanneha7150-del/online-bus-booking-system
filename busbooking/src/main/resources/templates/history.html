@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <title>Booking History</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>User Booking History</h2>
+
+  <form action="/history" method="get">
+
+    <input type="text"
+           name="userName"
+           placeholder="Enter User Name"
+           required>
+
+    <button type="submit">
+      Search History
+    </button>
+
+  </form>
+
+  <table>
+
+    <tr>
+      <th>ID</th>
+      <th>Bus</th>
+      <th>Source</th>
+      <th>Destination</th>
+      <th>Seat</th>
+    </tr>
+
+    <tr th:each="b : ${bookings}">
+
+      <td th:text="${b.bookingId}"></td>
+      <td th:text="${b.busName}"></td>
+      <td th:text="${b.source}"></td>
+      <td th:text="${b.destination}"></td>
+      <td th:text="${b.seatNumber}"></td>
+
+    </tr>
+
+  </table>
+
+</div>
+
+</body>
+</html>
