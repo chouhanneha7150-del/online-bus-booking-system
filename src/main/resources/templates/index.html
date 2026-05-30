@@ -3,7 +3,50 @@
 <head>
     <title>Online Bus Booking</title>
 
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#e5e5e5;
+            margin:0;
+            padding:0;
+        }
+
+        .container{
+            width:400px;
+            margin:80px auto;
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+
+        h1{
+            margin-bottom:30px;
+            color:#0d1b2a;
+        }
+
+        .btn{
+            display:block;
+            width:100%;
+            padding:15px;
+            margin:10px 0;
+            background:#1976d2;
+            color:white;
+            text-decoration:none;
+            border:none;
+            border-radius:5px;
+            font-size:18px;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            background:#0d47a1;
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -12,37 +55,29 @@
 
     <h1>Online Bus Booking System</h1>
 
-    <a href="/register">
-        <button>User Register</button>
-    </a>
+    <a href="/register" class="btn">User Register</a>
 
-    <a href="/login">
-        <button>User Login</button>
-    </a>
+    <a href="/login" class="btn">User Login</a>
 
-    <a href="/addbus">
-        <button>Add Bus</button>
-    </a>
+    <a href="/addbus" class="btn">Add Bus</a>
 
-    <a href="/booking">
-        <button>Book Ticket</button>
-    </a>
+    <a href="/booking" class="btn">Book Ticket</a>
 
-    <a href="/buses">
-        <button>View All Buses</button>
-    </a>
+    <a href="/buses" class="btn">View All Buses</a>
 
-    <a href="/bookings">
-        <button>View All Bookings</button>
-    </a>
+    <a href="/allbookings" class="btn">View All Bookings</a>
 
-    <a href="/search">
-        <button>Search Bus</button>
-    </a>
+    <a href="/search" class="btn">Search Bus</a>
 
-    <a href="/history">
-        <button>Booking History</button>
-    </a>
+    <a href="/history" class="btn">Booking History</a>
+
+    <form action="/logout" method="post">
+
+        <button type="submit" class="btn">
+            Logout
+        </button>
+
+    </form>
 
 </div>
 
